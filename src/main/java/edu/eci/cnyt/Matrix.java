@@ -8,6 +8,7 @@ public class Matrix {
     private boolean [][] matrixBool;
     private double [][] matrix;
     
+    
     /*
      * matrix numbers object constructor.
      *
@@ -33,7 +34,7 @@ public class Matrix {
         }
     }
     
-    public void setMatrix(int i, int j, int number){
+    public void setMatrix(int i, int j, double number){
         matrix[i][j]=number;
     }
     
