@@ -15,7 +15,7 @@ public class Simulacion {
      * @param matrix2 Second matrix to multiplicate.
      * @return Answer of the multiplication of matrix1 and matrix2.
      */
-    public Matrix multiplicationMatrix(Matrix matrix1,Matrix matrix2){
+    public static Matrix multiplicationMatrix(Matrix matrix1,Matrix matrix2){
         Matrix answ= new Matrix(matrix1.getRow(),matrix2.getColumn());
         for (int i=0; i<matrix1.getRow(); i++){
             for (int j=0;j<matrix2.getColumn();j++){

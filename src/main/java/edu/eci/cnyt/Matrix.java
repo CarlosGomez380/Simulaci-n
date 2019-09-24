@@ -51,4 +51,43 @@ public class Matrix {
     }
    
     
+    @Override
+    public String toString() {
+        String str = "";
+        for (int row = 0; row < matrix.length; row++) {
+            for (int column = 0; column < matrix[row].length; column++) {
+                str = Double.toString(matrix[row][column]) + str;
+                if (column == matrix[row].length - 1) {
+                    str = str + "\n";
+                } else {
+                    str = str + " , ";
+                }
+            }
+        }
+        return str;
+    }
+    
+    @Override
+    public boolean equals(Object o) {
+        if (o instanceof Matrix) {
+            if(((Matrix) o).getColumn()!=getColumn() || ((Matrix) o).getRow()!=getRow()){
+                return false;
+            }
+            for (int row = 0; row < matrix.length; row++) {
+                for (int column = 0; column < matrix[row].length; column++) {
+                    Double a; 
+                    a = ((Matrix)o).getMatrix(row, column);
+                    Double b;
+                    b=matrix[row][column];
+                    if (!b.equals(a)){
+                        return false;
+                    }
+                }
+            }
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
 }
